@@ -78,12 +78,10 @@ function SetTime(val) {
     }
 
     if (new_hour > 23) {
-        new_hour = 0;
         hour = 0;
     }
 
     if(new_hour < 0) {
-        new_hour = 0;
         hour = 0;
     }
 
