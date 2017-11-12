@@ -1,0 +1,17 @@
+{
+  "name": "SparkzVille-Bulletin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.2.1",
+    "discord.js-commando": "^0.9.0",
+    "module-js": "^6.0.0",
+    "module.js": "^2.2.4"
+  }
+}
