@@ -1,11 +1,11 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-var hour = 0;
+var hour = 6;
 var minute = 0;
 var season = ["Spring", "Summer", "Fall", "Winter"];
 var starting_season = 0;
 var current_season = season[0];
-var weather = ["Sunny", "Cloudy", "Rain", "Thunderstorm", "Tropical Storm", "Hurricane"];
+var weather = ["Sunny", "Cloudy", "Rain", "Thunderstorm"];
 var winter_weather = ["Sunny", "Cloudy", "Snow", "Blizzard"];
 var current_weather = weather[0];
 var current_weather_winter = winter_weather[0];
@@ -29,7 +29,7 @@ function SetWeekDay(val) {
 }
 
 function SetWeather() {
-    var new_weather = weather[Math.floor(Math.random() * 6)];
+    var new_weather = weather[Math.floor(Math.random() * 4)];
 
     if(current_season == season[3]) {
         var new_weather_winter = winter_weather[Math.floor(Math.random() * 4)];
@@ -118,25 +118,25 @@ function CurrentTime() {
     }
 }
 
-setInterval(function(){ SetTime(1); }, 12000);
+setInterval(function(){ SetTime(1); }, 60000);
 
-setInterval(function(){ SetWeather(); }, 17280000);
+setInterval(function(){ SetWeather(); }, 86400000);
 
-setInterval(function(){ SetWeekDay(1); }, 17280000);
+setInterval(function(){ SetWeekDay(1); }, 86400000);
 
-setInterval(function(){ SetSeason(1); }, 535680000);
+setInterval(function(){ SetSeason(1); }, 2678400000);
 
 if(starting_season == 3) {
-    setInterval(function(){ bot.channels.get('378366881683341314').send("The weather is now " + current_weather_winter); }, 17280001);
+    setInterval(function(){ bot.channels.get('378366881683341314').send("The weather is now " + current_weather_winter); }, 86400001);
 }
 
 if(starting_season < 3) {
-    setInterval(function(){ bot.channels.get('378366881683341314').send("The weather is now " + current_weather); }, 17280001);
+    setInterval(function(){ bot.channels.get('378366881683341314').send("The weather is now " + current_weather); }, 86400001);
 }
 
-setInterval(function(){ bot.channels.get('378366881683341314').send("It's now " + current_weekday); }, 17280001);
+setInterval(function(){ bot.channels.get('378366881683341314').send("It's now " + current_weekday); }, 86400001);
 
-setInterval(function(){ bot.channels.get('378366881683341314').send("It is now " + current_season); }, 535680001)
+setInterval(function(){ bot.channels.get('378366881683341314').send("It is now " + current_season); }, 2678400001)
 
 bot.on('message', (message) => {
  
