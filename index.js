@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-var hour = 6;
+var hour = 0;
 var minute = 0;
 var season = ["Spring", "Summer", "Fall", "Winter"];
 var starting_season = 0;
