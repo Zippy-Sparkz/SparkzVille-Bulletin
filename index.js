@@ -124,7 +124,7 @@ setInterval(function(){ SetWeather(); }, 86400000);
 
 setInterval(function(){ SetWeekDay(1); }, 86400000);
 
-setInterval(function(){ SetSeason(1); }, 2678400000);
+setInterval(function(){ SetSeason(1); }, 2147483647);
 
 if(starting_season == 3) {
     setInterval(function(){ bot.channels.get('378366881683341314').send("The weather is now " + current_weather_winter); }, 86400001);
